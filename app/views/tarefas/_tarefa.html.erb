@@ -1,0 +1,13 @@
+<div class="cards <%= 'resolved' if tarefa.resolvida %> ">
+
+  <%= button_to '', tarefa, method: :patch, class: "fas fa-check btn resolved-btn #{'active' if tarefa.resolvida}" %>
+
+  <div class="cards-info">
+
+    <h3 class="task"> <%= tarefa.nome %> </h3>
+    <p class="time"> <%= l tarefa.created_at, format: :custom %> </p>
+
+  </div>
+
+  <%= button_to '', tarefa, method: :delete, class: 'fas fa-times btn delete-btn'%>
+</div>
